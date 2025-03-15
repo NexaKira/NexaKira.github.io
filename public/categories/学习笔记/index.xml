@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+        <title>学习笔记 on NexaKira</title>
+        <link>http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/</link>
+        <description>Recent content in 学习笔记 on NexaKira</description>
+        <generator>Hugo -- gohugo.io</generator>
+        <language>zh-cn</language>
+        <copyright>NexaKira</copyright>
+        <lastBuildDate>Fri, 14 Mar 2025 22:36:35 +0800</lastBuildDate><atom:link href="http://localhost:1313/categories/%E5%AD%A6%E4%B9%A0%E7%AC%94%E8%AE%B0/index.xml" rel="self" type="application/rss+xml" /><item>
+        <title>数据库</title>
+        <link>http://localhost:1313/p/mysql-learning/</link>
+        <pubDate>Fri, 14 Mar 2025 22:36:35 +0800</pubDate>
+        
+        <guid>http://localhost:1313/p/mysql-learning/</guid>
+        <description>&lt;h2 id=&#34;数据库的定义&#34;&gt;数据库的定义
+&lt;/h2&gt;&lt;p&gt;将大量数据保存起来，通过计算机加工而成的可以进行&lt;strong&gt;高效访问的数据集合&lt;/strong&gt;称为数据库（DataBase，简称DB）&lt;/p&gt;
+</description>
+        </item>
+        
+    </channel>
+</rss>
