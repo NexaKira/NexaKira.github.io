@@ -8,13 +8,13 @@
         <language>zh-cn</language>
         <copyright>NexaKira</copyright>
         <lastBuildDate>Sat, 15 Mar 2025 16:38:33 +0800</lastBuildDate><atom:link href="http://localhost:1313/post/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Test2</title>
-        <link>http://localhost:1313/p/test2/</link>
+        <title>我的大学同学唐梓呈</title>
+        <link>http://localhost:1313/p/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6%E5%90%8C%E5%AD%A6%E5%94%90%E6%A2%93%E5%91%88/</link>
         <pubDate>Sat, 15 Mar 2025 16:38:33 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/test2/</guid>
-        <description>&lt;h2 id=&#34;介绍以下唐梓呈&#34;&gt;介绍以下唐梓呈
-&lt;/h2&gt;&lt;p&gt;唐梓呈是久经考验的资本主义战士，是根正苗红的封建遗老遗少，是彻底的剥削主义者。唐梓呈有坚定的奴役信念，他能在面对巨大的外部压力下始终坚守资本主义理想。他的思想具有无限力量， 就是因为它剥削。 它封建而落后，它给人们提供了决不同任何科学的、任何革命的、任何为反抗阶级压迫所作的支持相妥协的完整的剥削观。&lt;/p&gt;
+        <guid>http://localhost:1313/p/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6%E5%90%8C%E5%AD%A6%E5%94%90%E6%A2%93%E5%91%88/</guid>
+        <description>&lt;h2 id=&#34;介绍一下唐梓呈&#34;&gt;介绍一下唐梓呈
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;唐梓呈&lt;/strong&gt;是久经考验的资本主义战士，是根正苗红的封建遗老遗少，是彻底的剥削主义者。唐梓呈有坚定的奴役信念，他能在面对巨大的外部压力下始终坚守资本主义理想。他的思想具有无限力量， 就是因为它剥削。 它封建而落后，它给人们提供了决不同任何科学的、任何革命的、任何为反抗阶级压迫所作的支持相妥协的完整的剥削观。&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -24,7 +24,35 @@
         
         <guid>http://localhost:1313/p/mysql-learning/</guid>
         <description>&lt;h2 id=&#34;数据库的定义&#34;&gt;数据库的定义
-&lt;/h2&gt;&lt;p&gt;将大量数据保存起来，通过计算机加工而成的可以进行&lt;strong&gt;高效访问的数据集合&lt;/strong&gt;称为数据库（DataBase，简称DB）。&lt;/p&gt;
+&lt;/h2&gt;&lt;h1 id=&#34;数据库&#34;&gt;数据库
+&lt;/h1&gt;&lt;h2 id=&#34;数据库的相关定义&#34;&gt;数据库的相关定义
+&lt;/h2&gt;&lt;ul&gt;
+&lt;li&gt;将大量数据保存起来，通过计算机加工而成的可以进行&lt;strong&gt;高效访问的数据集合&lt;/strong&gt;称为数据库（DataBase，简称DB）。&lt;/li&gt;
+&lt;li&gt;用来管理数据库的计算机系统称为数据库管理系统（DBMS），例如MySQL。&lt;/li&gt;
+&lt;li&gt;从事管理和维护数据库管理系统的相关工作人员称为数据库管理员（DBA）。&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;表table&#34;&gt;表（table）
+&lt;/h2&gt;&lt;p&gt;表是某种特定类型数据的结构化清单，即存储在表中的数据是同一种类型的数据或清单。数据库中每个表都有一个名字来标识自己，这个名字是唯一的。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;虽然在一个数据库中不能两次使用相同的表名，但在不同的数据库中完全可以使用相同的表名&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;列&#34;&gt;列
+&lt;/h3&gt;&lt;p&gt;表由列组成，列存储表中某部分的信息，所有的表都是由一个或多个列组成的。数据库中每个列都有相应的数据类型（datatype）。数据类型定义了列可以存储哪些数据种类。例如，如果列中存储的是数字，则相应的数据类型应该为数值类型。&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;数据类型限定了可存储在列中的数据种类（例如，防止在数值字段中录入字符值）。数据类型还帮助正确地分类数据，并在优化磁盘使用方面起重要的作用。&lt;/p&gt;&lt;/blockquote&gt;
+&lt;h3 id=&#34;行&#34;&gt;行
+&lt;/h3&gt;&lt;p&gt;表中的数据是按行存储的，所保存的每个记录存储在自己的行内。&lt;/p&gt;
+&lt;h3 id=&#34;主键&#34;&gt;主键
+&lt;/h3&gt;&lt;p&gt;表中的每一行都应该有一列（或几列）可以&lt;strong&gt;唯一标识&lt;/strong&gt;自己，即主键用来表示一个特定的行。没有主键，更新或删除表中特定行就极为困难，因为你不能保证操作只涉及相关的行，没有伤及无辜。&lt;/p&gt;
+&lt;p&gt;主键需要满足：&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;表格可以没有主键，但是最多只能拥有&lt;strong&gt;一个&lt;/strong&gt;主键&lt;/li&gt;
+&lt;li&gt;主键的值必须是绝对唯一&lt;/li&gt;
+&lt;li&gt;主键的值不能为NULL，必须有对应的值&lt;/li&gt;
+&lt;li&gt;主键列中的值不允许修改和更新&lt;/li&gt;
+&lt;li&gt;主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）&lt;/li&gt;
+&lt;/ul&gt;
+&lt;h2 id=&#34;什么是sql&#34;&gt;什么是SQL
+&lt;/h2&gt;&lt;p&gt;SQL 是结构化编程语言的缩写，是一种专门用来与数据库沟通的语言。SQL 不是某个特定数据库厂商专有的语言。绝大多数重要的 DBMS 支 持 SQL，所以学习此语言使你几乎能与所有数据库打交道。&lt;/p&gt;
 </description>
         </item>
         <item>

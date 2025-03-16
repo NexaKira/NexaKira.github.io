@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="zh-cn" dir="ltr">
     <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset='utf-8'>
-<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="数据库的定义 将大量数据保存起来，通过计算机加工而成的可以进行高效访问的数据集合称为数据库（DataBase，简称DB）。\n">
+<meta name='viewport' content='width=device-width, initial-scale=1'><meta name='description' content="数据库的相关定义 将大量数据保存起来，通过计算机加工而成的可以进行高效访问的数据集合称为数据库（DataBase，简称DB）。 用来管理数据库的计算机系统称为数据库管理系统（DBMS），例如MySQL。 从事管理和维护数据库管理系统的相关工作人员称为数据库管理员（DBA）。 表（table） 表是某种特定类型数据的结构化清单，即存储在表中的数据是同一种类型的数据或清单。数据库中每个表都有一个名字来标识自己，这个名字是唯一的。\n">
 <title>数据库</title>
 
 <link rel='canonical' href='http://localhost:1313/p/mysql-learning/'>
 
 <link rel="stylesheet" href="/scss/style.min.663803bebe609202d5b39d848f2d7c2dc8b598a2d879efa079fa88893d29c49c.css"><meta property='og:title' content="数据库">
-<meta property='og:description' content="数据库的定义 将大量数据保存起来，通过计算机加工而成的可以进行高效访问的数据集合称为数据库（DataBase，简称DB）。\n">
+<meta property='og:description' content="数据库的相关定义 将大量数据保存起来，通过计算机加工而成的可以进行高效访问的数据集合称为数据库（DataBase，简称DB）。 用来管理数据库的计算机系统称为数据库管理系统（DBMS），例如MySQL。 从事管理和维护数据库管理系统的相关工作人员称为数据库管理员（DBA）。 表（table） 表是某种特定类型数据的结构化清单，即存储在表中的数据是同一种类型的数据或清单。数据库中每个表都有一个名字来标识自己，这个名字是唯一的。\n">
 <meta property='og:url' content='http://localhost:1313/p/mysql-learning/'>
 <meta property='og:site_name' content='NexaKira'>
 <meta property='og:type' content='article'><meta property='article:section' content='Post' /><meta property='article:tag' content='MySQL' /><meta property='article:published_time' content='2025-03-14T22:36:35&#43;08:00'/><meta property='article:modified_time' content='2025-03-14T22:36:35&#43;08:00'/>
 <meta name="twitter:title" content="数据库">
-<meta name="twitter:description" content="数据库的定义 将大量数据保存起来，通过计算机加工而成的可以进行高效访问的数据集合称为数据库（DataBase，简称DB）。\n">
+<meta name="twitter:description" content="数据库的相关定义 将大量数据保存起来，通过计算机加工而成的可以进行高效访问的数据集合称为数据库（DataBase，简称DB）。 用来管理数据库的计算机系统称为数据库管理系统（DBMS），例如MySQL。 从事管理和维护数据库管理系统的相关工作人员称为数据库管理员（DBA）。 表（table） 表是某种特定类型数据的结构化清单，即存储在表中的数据是同一种类型的数据或清单。数据库中每个表都有一个名字来标识自己，这个名字是唯一的。\n">
     </head>
     <body class="
     article-page
@@ -265,7 +265,15 @@
         <div class="widget--toc">
             <nav id="TableOfContents">
   <ol>
-    <li><a href="#数据库的定义">数据库的定义</a></li>
+    <li><a href="#数据库的相关定义">数据库的相关定义</a></li>
+    <li><a href="#表table">表（table）</a>
+      <ol>
+        <li><a href="#列column">列（column）</a></li>
+        <li><a href="#行row">行（row）</a></li>
+        <li><a href="#主键primary-key">主键（primary key）</a></li>
+      </ol>
+    </li>
+    <li><a href="#什么是sql">什么是SQL</a></li>
   </ol>
 </nav>
         </div>
@@ -330,7 +338,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 1 分钟
+                    阅读时长: 2 分钟
                 </time>
             </div>
         
@@ -345,8 +353,34 @@
     <section class="article-content">
     
     
-    <h2 id="数据库的定义">数据库的定义
-</h2><p>将大量数据保存起来，通过计算机加工而成的可以进行<strong>高效访问的数据集合</strong>称为数据库（DataBase，简称DB）。</p>
+    <h2 id="数据库的相关定义">数据库的相关定义
+</h2><ul>
+<li>将大量数据保存起来，通过计算机加工而成的可以进行<strong>高效访问的数据集合</strong>称为数据库（DataBase，简称DB）。</li>
+<li>用来管理数据库的计算机系统称为数据库管理系统（DBMS），例如MySQL。</li>
+<li>从事管理和维护数据库管理系统的相关工作人员称为数据库管理员（DBA）。</li>
+</ul>
+<h2 id="表table">表（table）
+</h2><p>表是某种特定类型数据的结构化清单，即存储在表中的数据是同一种类型的数据或清单。数据库中每个表都有一个名字来标识自己，这个名字是唯一的。</p>
+<blockquote>
+<p>虽然在一个数据库中不能两次使用相同的表名，但在不同的数据库中完全可以使用相同的表名</p></blockquote>
+<h3 id="列column">列（column）
+</h3><p>表由列组成，列存储表中某部分的信息，所有的表都是由一个或多个列组成的。数据库中每个列都有相应的数据类型（datatype）。数据类型定义了列可以存储哪些数据种类。例如，如果列中存储的是数字，则相应的数据类型应该为数值类型。</p>
+<blockquote>
+<p>数据类型限定了可存储在列中的数据种类（例如，防止在数值字段中录入字符值）。数据类型还帮助正确地分类数据，并在优化磁盘使用方面起重要的作用。</p></blockquote>
+<h3 id="行row">行（row）
+</h3><p>表中的数据是按行存储的，所保存的每个记录存储在自己的行内。</p>
+<h3 id="主键primary-key">主键（primary key）
+</h3><p>表中的每一行都应该有一列（或几列）可以<strong>唯一标识</strong>自己，即主键用来表示一个特定的行。没有主键，更新或删除表中特定行就极为困难，因为你不能保证操作只涉及相关的行，没有伤及无辜。</p>
+<p>主键需要满足：</p>
+<ul>
+<li>表格可以没有主键，但是最多只能拥有<strong>一个</strong>主键</li>
+<li>主键的值必须是绝对唯一</li>
+<li>主键的值不能为NULL，必须有对应的值</li>
+<li>主键列中的值不允许修改和更新</li>
+<li>主键值不能重用（如果某行从表中删除，它的主键不能赋给以后的新行）</li>
+</ul>
+<h2 id="什么是sql">什么是SQL
+</h2><p>SQL 是结构化编程语言的缩写，是一种专门用来与数据库沟通的语言。SQL 不是某个特定数据库厂商专有的语言。绝大多数重要的 DBMS 支 持 SQL，所以学习此语言使你几乎能与所有数据库打交道。</p>
 
 </section>
 
