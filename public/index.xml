@@ -8,13 +8,13 @@
         <language>zh-cn</language>
         <copyright>NexaKira</copyright>
         <lastBuildDate>Sat, 15 Mar 2025 16:38:33 +0800</lastBuildDate><atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>我的大学同学唐梓呈</title>
-        <link>http://localhost:1313/p/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6%E5%90%8C%E5%AD%A6%E5%94%90%E6%A2%93%E5%91%88/</link>
+        <title>我的大学同学施飞龙</title>
+        <link>http://localhost:1313/p/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6%E5%90%8C%E5%AD%A6%E6%96%BD%E9%A3%9E%E9%BE%99/</link>
         <pubDate>Sat, 15 Mar 2025 16:38:33 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6%E5%90%8C%E5%AD%A6%E5%94%90%E6%A2%93%E5%91%88/</guid>
-        <description>&lt;h2 id=&#34;介绍一下唐梓呈&#34;&gt;介绍一下唐梓呈
-&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;唐梓呈&lt;/strong&gt;是久经考验的资本主义战士，是根正苗红的封建遗老遗少，是彻底的剥削主义者。唐梓呈有坚定的奴役信念，他能在面对巨大的外部压力下始终坚守资本主义理想。他的思想具有无限力量， 就是因为它剥削。 它封建而落后，它给人们提供了决不同任何科学的、任何革命的、任何为反抗阶级压迫所作的支持相妥协的完整的剥削观。&lt;/p&gt;
+        <guid>http://localhost:1313/p/%E6%88%91%E7%9A%84%E5%A4%A7%E5%AD%A6%E5%90%8C%E5%AD%A6%E6%96%BD%E9%A3%9E%E9%BE%99/</guid>
+        <description>&lt;h2 id=&#34;介绍一下施飞龙&#34;&gt;介绍一下施飞龙
+&lt;/h2&gt;&lt;p&gt;&lt;strong&gt;施飞龙&lt;/strong&gt;号称605雌小鬼，常大小奶龙，金铲铲大王；同时也是一位&lt;strong&gt;1500小时&lt;/strong&gt;的魔王C+选手。他热衷于在CS2中展示独创的脑血栓枪法，开镜时准星震颤的幅度足以让帕金森患者拜师学艺。每当经济局掏出全甲长枪，总能用人体描边技法给敌方铠甲抛光，匪口未出便被警喷糊脸的壮举已成为保留节目。施飞龙还精通阴阳怪气，总在队友失误时时大肆狗叫，全然不顾自己招笑的操作。游戏意识更是没有一点，CS转点跑动时仿佛身怀六甲，铲铲D牌就像老奶奶过马路，50块钱就像是nmd棺材本一样死死捏住就是不D，别人一波狠入淘汰之后往往会来一句“&lt;strong&gt;不想玩啦&lt;/strong&gt;”，掩饰刚刚菜的抠脚的游戏操作……（施飞龙的招笑操作还有很多，但是快下课写不完了，关注我的博客，每日更新小丑施奶龙的事迹）&lt;/p&gt;
 </description>
         </item>
         <item>
@@ -52,7 +52,7 @@
 &lt;h2 id=&#34;什么是sql&#34;&gt;什么是SQL
 &lt;/h2&gt;&lt;p&gt;SQL 是结构化编程语言的缩写，是一种专门用来与数据库沟通的语言。SQL 不是某个特定数据库厂商专有的语言。绝大多数重要的 DBMS 支 持 SQL，所以学习此语言使你几乎能与所有数据库打交道。&lt;/p&gt;
 &lt;h1 id=&#34;检索数据&#34;&gt;检索数据
-&lt;/h1&gt;&lt;h2 id=&#34;selecct语句&#34;&gt;SELECCT语句
+&lt;/h1&gt;&lt;h2 id=&#34;select语句&#34;&gt;SELECT语句
 &lt;/h2&gt;&lt;p&gt;它的用途是从一个或多个表中检索信息。为了使用SELECT检索表数据，必须给出至少两条信息&amp;ndash;想选择什么，以及从什么地方选择。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -64,7 +64,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;students&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;上述语句利用SELECTT语句从students表中检索两个分别名叫name和age的列。所需的列名写在SELECT关键字后，FROM关键字指出从哪个表中检索数据。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;上述语句利用SELECT语句从students表中检索两个分别名叫name和age的列。所需的列名写在SELECT关键字后，FROM关键字指出从哪个表中检索数据。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;注意：多条SQL语句必须以分号（;）分割。SQL语句不区分大小写，通常对SQL关键字使用大写，而对列名和表名使用小写，这样做代码更易于阅读和调试。同样，在处理SQL语句时，其中所有空格都被忽略。&lt;/p&gt;&lt;/blockquote&gt;
 &lt;p&gt;除了指定所需的列外，SELECT语句还可以检索所有的列而不必逐个列出它们。在实际列名的位置使用星号（*）通配符可以做到这点&lt;/p&gt;

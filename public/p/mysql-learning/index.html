@@ -276,7 +276,7 @@
   </ol>
 
   <ol>
-    <li><a href="#selecct语句">SELECCT语句</a>
+    <li><a href="#select语句">SELECT语句</a>
       <ol>
         <li><a href="#检索不同的值">检索不同的值</a></li>
         <li><a href="#限制结果">限制结果</a></li>
@@ -390,7 +390,7 @@
 <h2 id="什么是sql">什么是SQL
 </h2><p>SQL 是结构化编程语言的缩写，是一种专门用来与数据库沟通的语言。SQL 不是某个特定数据库厂商专有的语言。绝大多数重要的 DBMS 支 持 SQL，所以学习此语言使你几乎能与所有数据库打交道。</p>
 <h1 id="检索数据">检索数据
-</h1><h2 id="selecct语句">SELECCT语句
+</h1><h2 id="select语句">SELECT语句
 </h2><p>它的用途是从一个或多个表中检索信息。为了使用SELECT检索表数据，必须给出至少两条信息&ndash;想选择什么，以及从什么地方选择。</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -402,7 +402,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>上述语句利用SELECTT语句从students表中检索两个分别名叫name和age的列。所需的列名写在SELECT关键字后，FROM关键字指出从哪个表中检索数据。</p>
+</div><p>上述语句利用SELECT语句从students表中检索两个分别名叫name和age的列。所需的列名写在SELECT关键字后，FROM关键字指出从哪个表中检索数据。</p>
 <blockquote>
 <p>注意：多条SQL语句必须以分号（;）分割。SQL语句不区分大小写，通常对SQL关键字使用大写，而对列名和表名使用小写，这样做代码更易于阅读和调试。同样，在处理SQL语句时，其中所有空格都被忽略。</p></blockquote>
 <p>除了指定所需的列外，SELECT语句还可以检索所有的列而不必逐个列出它们。在实际列名的位置使用星号（*）通配符可以做到这点</p>
@@ -499,48 +499,6 @@
      
     
         
-    <div class="disqus-container">
-    <div id="disqus_thread"></div>
-<script>
-    window.disqus_config = function () {
-    
-    
-    
-    };
-    (function() {
-        if (["localhost", "127.0.0.1"].indexOf(window.location.hostname) != -1) {
-            document.getElementById('disqus_thread').innerHTML = 'Disqus comments not available by default when the website is previewed locally.';
-            return;
-        }
-        var d = document, s = d.createElement('script'); s.async = true;
-        s.src = '//' + "hugo-theme-stack" + '.disqus.com/embed.js';
-        s.setAttribute('data-timestamp', +new Date());
-        (d.head || d.body).appendChild(s);
-    })();
-</script>
-<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
-<a href="https://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
-</div>
-
-<style>
-    .disqus-container {
-        background-color: var(--card-background);
-        border-radius: var(--card-border-radius);
-        box-shadow: var(--shadow-l1);
-        padding: var(--card-padding);
-    }
-</style>
-
-<script>
-    window.addEventListener('onColorSchemeChange', (e) => {
-        if (typeof DISQUS == 'object') {
-            DISQUS.reset({
-                reload: true
-            });
-        }
-    })
-</script>
-
     
 
     <footer class="site-footer">

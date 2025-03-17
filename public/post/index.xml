@@ -23,8 +23,8 @@
         <pubDate>Fri, 14 Mar 2025 22:36:35 +0800</pubDate>
         
         <guid>http://localhost:1313/p/mysql-learning/</guid>
-        <description>&lt;h2 id=&#34;数据库的相关定义&#34;&gt;数据库的相关定义
-&lt;/h2&gt;&lt;ul&gt;
+        <description>&lt;h1 id=&#34;数据库的相关定义&#34;&gt;数据库的相关定义
+&lt;/h1&gt;&lt;ul&gt;
 &lt;li&gt;将大量数据保存起来，通过计算机加工而成的可以进行&lt;strong&gt;高效访问的数据集合&lt;/strong&gt;称为数据库（DataBase，简称DB）。&lt;/li&gt;
 &lt;li&gt;用来管理数据库的计算机系统称为数据库管理系统（DBMS），例如MySQL。&lt;/li&gt;
 &lt;li&gt;从事管理和维护数据库管理系统的相关工作人员称为数据库管理员（DBA）。&lt;/li&gt;
@@ -52,7 +52,7 @@
 &lt;h2 id=&#34;什么是sql&#34;&gt;什么是SQL
 &lt;/h2&gt;&lt;p&gt;SQL 是结构化编程语言的缩写，是一种专门用来与数据库沟通的语言。SQL 不是某个特定数据库厂商专有的语言。绝大多数重要的 DBMS 支 持 SQL，所以学习此语言使你几乎能与所有数据库打交道。&lt;/p&gt;
 &lt;h1 id=&#34;检索数据&#34;&gt;检索数据
-&lt;/h1&gt;&lt;h2 id=&#34;selecct语句&#34;&gt;SELECCT语句
+&lt;/h1&gt;&lt;h2 id=&#34;select语句&#34;&gt;SELECT语句
 &lt;/h2&gt;&lt;p&gt;它的用途是从一个或多个表中检索信息。为了使用SELECT检索表数据，必须给出至少两条信息&amp;ndash;想选择什么，以及从什么地方选择。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
@@ -64,10 +64,10 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;k&#34;&gt;FROM&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;students&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;上述语句利用SELECTT语句从students表中检索两个分别名叫name和age的列。所需的列名写在SELECT关键字后，FROM关键字指出从哪个表中检索数据。&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;上述语句利用SELECT语句从students表中检索两个分别名叫name和age的列。所需的列名写在SELECT关键字后，FROM关键字指出从哪个表中检索数据。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;注意：多条SQL语句必须以分号（;）分割。SQL语句不区分大小写，通常对SQL关键字使用大写，而对列名和表名使用小写，这样做代码更易于阅读和调试。同样，在处理SQL语句时，其中所有空格都被忽略。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;除了指定所需的列外，SELECT语句还可以检索所有的列而不必逐个列出它们。在实际列名的位置使用星号（）通配符可以做到这点&lt;/p&gt;
+&lt;p&gt;除了指定所需的列外，SELECT语句还可以检索所有的列而不必逐个列出它们。在实际列名的位置使用星号（*）通配符可以做到这点&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
@@ -80,8 +80,8 @@
 &lt;/div&gt;
 &lt;/div&gt;&lt;blockquote&gt;
 &lt;p&gt;使用通配符有一个大优点，由于不明确指定列名，所以能检索出名字未知的列。但是除非必要，使用通配符检索不需要的列通常会降低检索速度和应用程序的性能。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;检索不同的值&lt;/strong&gt;&lt;/p&gt;
-&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
+&lt;h3 id=&#34;检索不同的值&#34;&gt;检索不同的值
+&lt;/h3&gt;&lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
 &lt;/span&gt;&lt;span class=&#34;lnt&#34;&gt;2
@@ -94,8 +94,8 @@
 &lt;/div&gt;&lt;p&gt;第一行代码告诉DBMS只返回不同的（具有唯一性）的class行，如果使用 DISTINCT 关键字，它必须放在列名的前面。&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;注意：不能部分使用 DISTINCT。DISTINCT关键字作用于所有的列，不仅仅是跟在其后的那一列。&lt;/p&gt;&lt;/blockquote&gt;
-&lt;p&gt;&lt;strong&gt;限制结果&lt;/strong&gt;&lt;/p&gt;
-&lt;p&gt;SELECT 语句返回指定表中所有匹配的行，很可能是每一行。如果你只想返回第一行或一定数量的行，怎么办呢。注意！这一SQL语句在不同数据库的实现并不相同，下面以 MySQL 为例。&lt;/p&gt;
+&lt;h3 id=&#34;限制结果&#34;&gt;限制结果
+&lt;/h3&gt;&lt;p&gt;SELECT 语句返回指定表中所有匹配的行，很可能是每一行。如果你只想返回第一行或一定数量的行，怎么办呢。注意！这一SQL语句在不同数据库的实现并不相同，下面以 MySQL 为例。&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
