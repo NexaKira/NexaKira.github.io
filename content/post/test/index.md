@@ -104,3 +104,53 @@ FROM students
 LIMIT 5;
 ```
 
+### 排序数据
+
+为了明确地排序用SELECT语句检索出的数据，可使用 ORDER BY 子句。ORDER BY 子句取一个或多个列的名字，据此对输出进行排序（默认升序排序）。
+
+```mysql
+SELECT name
+FROM students
+ORDER BY name;
+```
+
+> 注意：在指定一条 ORDER BY 子句时，应该保证它是SELECT语句中的最后一条子句。如果它不是最后的子句，将会出错。
+
+**按多个列排序**
+
+```mysql
+SELECT id,score,name
+FROM students
+ORDER BY score,name;
+```
+
+上述语句先按成绩（score）排序，再按姓名（name）排序
+
+```mysql
+# 等价于
+SELECT id,score,name
+FROM students
+ORDER BY 2,3
+```
+
+ORDER BY 2 表示按照SELECT清单中的第二个列 score 进行排序，ORDER BY 2，3 表示先按 score，再按name进行排序。
+
+**指定排序方向**
+
+数据排序不限于升序（从A到Z）排序，这只是默认的排序顺序，还可以使用ORDER BY子句进行降序（从Z到A）排序，为了实现降序排序，必须指定DESC关键字。
+
+```mysql
+SELECT id,score,name
+FROM students
+ORDER BY score DESC,name;
+```
+
+DESC 关键字只应用到直接位于其前面的列名。因此上述语句中score列将以降序排序，而name列（在每一个成绩内）仍然按标准的升序排序。
+
+> 如果想在多个列上进行降序排序，必须对每一列指定DESC关键字
+
+**注意：区分大小写和排序顺序**
+
+在对文本性数据进行排序时，A与a相同吗？a位于B之前，还是Z之后？这些问题不是理论问题，其答案取决于数据库的设置方式，大多数数据库管理系统将A视为与a相同。
+
+
