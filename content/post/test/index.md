@@ -153,4 +153,78 @@ DESC 关键字只应用到直接位于其前面的列名。因此上述语句中
 
 在对文本性数据进行排序时，A与a相同吗？a位于B之前，还是Z之后？这些问题不是理论问题，其答案取决于数据库的设置方式，大多数数据库管理系统将A视为与a相同。
 
+### 过滤数据
+
+**使用 WHERE 子句**
+
+数据库一般包含大量数据，很少需要检索表中的所有行。通常只会根据特定操作或报告的需要提取表数据的子集。只检索所需数据需要指定搜索条件（过滤条件）
+
+在 SELECT 语句中，数据根据 WHERE 子句中指定的搜索条件进行过滤。WHERE 子句在表名（FROM 子句）之后给出
+
+```mysql
+SELECT name, score
+FROM students
+WHERE score >= 60;
+```
+
+上述语句从 students 表中检索两个列，但不返回所有行，只返回 score 值大于等于60的行。
+
+> 注意：在同时使用 ORDER BY 和 WHERE 子句时，应该让 ORDER BY 位于 WHERE 之后，否则将会发生错误。
+
+**范围值检查**
+
+要检索某个范围的值，可以使用 BETWEEN 操作符。其语法与其他 WHERE 子句的操作符略有不同，BETWEEN 匹配范围中所有的值，**包括指定的开始值和结束值**。
+
+```mysql
+SELECT name, score
+FROM students
+WHERE score BETWEEN 60 AND 100;
+```
+
+**空值检查**
+
+在创建表时，表设计人员可以指定其中的列能否不包含值。在一个列不包含值时，称其包含空值 NULL。
+
+> NULL：无值，它与字段包含0、空字符串或仅仅包含空格不同。
+
+确定值是否为 NULL，不能简单地检查是否等于 NULL，SELECT 语句有一个特殊的 WHERE 子句，可用来检查具有 NULL 值的列。这个 WHERE 子句就是 IS NULL 子句。
+
+```mysql
+SELECT name
+FROM students
+WHERE score IS NULL;
+```
+
+上述语句返回没有成绩的学生姓名。
+
+> 注意：通过过滤选择不包含指定值的所有行时，你可能希望返回含 NULL 值的行。但这是做不到的。因为 NULL 比较特殊，所以在进行匹配过滤或非匹配过滤时，不会返回这些结果。
+
+**组合 WHERE 子句**
+
+为了进行更强的过滤控制，SQL 允许给出多个 WHERE 子句。这些子句有两种使用方法，即以 AND 子句或 OR 子句的方式使用。
+
+> **操作符：**用来联结或改变 WHERE 子句中的子句的关键字，也称为逻辑操作符
+
+**AND操作符**
+
+用在 WHERE 子句中的关键字，用来指示检索满足所有给定条件的行。
+
+```mysql
+SELECT id, score, name
+FROM students
+WHERE id = 1 AND score >= 60;
+```
+
+**OR操作符**
+
+OR 操作符与 AND 操作符正好相反，它指示 DBMS 检索匹配任一条件的行。（事实上，许多 DBMS 在 OR WHERE 子句的第一个条件得到满足的情况下，就不再计算第二个条件了）
+
+```mysql
+SELECT id, score, name
+FROM students
+WHERE id = 1 OR score >= 60;
+```
+
+**求值顺序**
+
 

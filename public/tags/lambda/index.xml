@@ -8,11 +8,11 @@
         <language>zh-cn</language>
         <copyright>NexaKira</copyright>
         <lastBuildDate>Sun, 23 Mar 2025 21:36:15 +0800</lastBuildDate><atom:link href="http://localhost:1313/tags/lambda/index.xml" rel="self" type="application/rss+xml" /><item>
-        <title>Lambda表达式</title>
-        <link>http://localhost:1313/p/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</link>
+        <title>Lambda和Stream流</title>
+        <link>http://localhost:1313/p/lambda%E5%92%8Cstream%E6%B5%81/</link>
         <pubDate>Sun, 23 Mar 2025 21:36:15 +0800</pubDate>
         
-        <guid>http://localhost:1313/p/lambda%E8%A1%A8%E8%BE%BE%E5%BC%8F/</guid>
+        <guid>http://localhost:1313/p/lambda%E5%92%8Cstream%E6%B5%81/</guid>
         <description>&lt;h2 id=&#34;lambda表达式&#34;&gt;Lambda表达式
 &lt;/h2&gt;&lt;p&gt;Lambda表达式是Java 8引入的一项重要功能，它允许我们以更简洁和灵活的方式编写代码。&lt;/p&gt;
 &lt;ul&gt;
@@ -49,7 +49,7 @@
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;span class=&#34;line&#34;&gt;&lt;span class=&#34;cl&#34;&gt;&lt;span class=&#34;w&#34;&gt;&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;o&#34;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&#34;w&#34;&gt; &lt;/span&gt;&lt;span class=&#34;n&#34;&gt;System&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;out&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;.&lt;/span&gt;&lt;span class=&#34;na&#34;&gt;println&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;(&lt;/span&gt;&lt;span class=&#34;n&#34;&gt;s&lt;/span&gt;&lt;span class=&#34;p&#34;&gt;);&lt;/span&gt;&lt;span class=&#34;w&#34;&gt;
 &lt;/span&gt;&lt;/span&gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;
 &lt;/div&gt;
-&lt;/div&gt;&lt;p&gt;**函数式接口：**有且仅有一个抽象方法的接口&lt;/p&gt;
+&lt;/div&gt;&lt;p&gt;&lt;strong&gt;函数式接口&lt;/strong&gt;：有且仅有一个抽象方法的接口&lt;/p&gt;
 &lt;div class=&#34;highlight&#34;&gt;&lt;div class=&#34;chroma&#34;&gt;
 &lt;table class=&#34;lntable&#34;&gt;&lt;tr&gt;&lt;td class=&#34;lntd&#34;&gt;
 &lt;pre tabindex=&#34;0&#34; class=&#34;chroma&#34;&gt;&lt;code&gt;&lt;span class=&#34;lnt&#34;&gt;1
