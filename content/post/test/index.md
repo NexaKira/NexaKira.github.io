@@ -106,7 +106,7 @@ LIMIT 5;
 
 ### 排序数据
 
-为了明确地排序用SELECT语句检索出的数据，可使用 ORDER BY 子句。ORDER BY 子句取一个或多个列的名字，据此对输出进行排序（默认升序排序）。
+为了明确地排序用SELECT语句检索出的数据，可使用 ORDER BY 子句。ORDER BY 子句取一个或多个列的名字，据此对输出进行排序（**默认升序排序**）。
 
 ```mysql
 SELECT name
@@ -226,5 +226,43 @@ WHERE id = 1 OR score >= 60;
 ```
 
 **求值顺序**
+
+WHERE 子句可以包含任意数目的 AND 和 OR 操作符。允许两者结合以进行复杂、高级的过滤。
+
+> 注意：SQL（像多数语言一样）在处理 OR 操作符前，优先处理 AND 操作符。所以记得使用圆括号对操作符进行明确分组
+
+
+
+**IN 操作符**
+
+IN 操作符用来指定条件范围，范围中的每个条件都可以进行匹配。IN 取一组由逗号分隔、括在圆括号中的合法值。
+
+```mysql
+SELECT name, score
+FROM students
+WHERE class IN ('一班','二班')
+ORDER BY score DESC;
+```
+
+为什么要使用 IN 操作符？其优点如下。
+
+- 在有很多合法选项时，IN 操作符的语法更清楚，更直观。
+- 在与其他 AND 和 OR 操作符组合使用 IN 时，求值顺序更容易管理。
+- IN 操作符一般比一组 OR 操作符执行得更快
+- IN 的最大优点是可以包含其他 SELECT 语句，能够更动态地建立 WHERE 子句
+
+
+
+**NOT 操作符**
+
+WHERE 子句中的 NOT 操作符有且只有一个功能，那就是否定其后所跟的任何条件。因为 NOT 从不单独使用，所以它的语法与其他操作符有所不同。NOT 关键字可以用在要过滤的列前，而不仅是在其后。
+
+```mysql
+SELECT name
+FROM students
+WHERE NOT class = '一班'
+ORDER BY name;
+```
+
 
 
