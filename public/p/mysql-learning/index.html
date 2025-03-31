@@ -282,6 +282,7 @@
         <li><a href="#限制结果">限制结果</a></li>
         <li><a href="#排序数据">排序数据</a></li>
         <li><a href="#过滤数据">过滤数据</a></li>
+        <li><a href="#用通配符进行过滤">用通配符进行过滤</a></li>
       </ol>
     </li>
   </ol>
@@ -348,7 +349,7 @@
 
 
                 <time class="article-time--reading">
-                    阅读时长: 7 分钟
+                    阅读时长: 8 分钟
                 </time>
             </div>
         
@@ -655,7 +656,66 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">ORDER</span><span class="w"> </span><span class="k">BY</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
+</div><h3 id="用通配符进行过滤">用通配符进行过滤
+</h3><p>前面介绍的所有操作符都是针对<strong>已知值</strong>进行过滤的。不管是匹配一个值还是多个值，检验大于还是小于已知值，或者检验某个范围的值，其共同点是过滤中使用的值都是已知的；但是利用通配符，可以创建比较特定数据的搜索模式。</p>
+<p>通配符本身实际上是SQL的 WHERE 子句中有特殊含义的字符，SQL支持几种通配符。为在搜索子句中使用通配符，必须使用 LIKE 操作符。LIKE 指示 DBMS，后跟的搜索模式利用通配符匹配而不是简单的相等匹配进行比较。通配符搜索只能用于文本字段（字符串），非文本数据类型字段不能使用通配符搜索。</p>
+<p><strong>百分号（%）通配符</strong></p>
+<p>最常使用的通配符是百分号（%）。在搜索串中，<strong>%表示任何字符出现任意次数</strong>。例如，为了找出所有姓张的同学，可写以下的 SELECT 语句：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;张%&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
 </div>
+</div><blockquote>
+<p>注意：根据 DBMS 的不同及其配置，搜索可以是区分大小写的</p></blockquote>
+<p>通配符也可以出现在搜索模式的中间</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;唐%呈&#39;</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
+<p>注意：通配符%看起来像是可以匹配任何东西，但有个例外，这就是NULL。子句 WHERE name LIKE ‘%’ 不会匹配学生姓名为 NULL 的行。</p></blockquote>
+<p><strong>下划线（__）通配符</strong></p>
+<p>另一个有用的通配符是下划线（__）。下划线的用途与%一样，但它只匹配单个字符，而不是多个字符。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-mysql" data-lang="mysql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">id</span><span class="p">,</span><span class="w"> </span><span class="n">name</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="n">students</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">WHERE</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="k">LIKE</span><span class="w"> </span><span class="s1">&#39;_梓呈&#39;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>方括号（[]）通配符</strong></p>
+<p>方括号（[]）通配符用来指定一个字符集，它必须匹配指定位置（通配符的位置）的一个字符。</p>
+<blockquote>
+<p>MySQL 不支持，省略。</p></blockquote>
+<p><strong>使用通配符的技巧</strong></p>
+<p>通配符搜索一般比其他搜索要耗费更长的处理时间。</p>
+<ul>
+<li>不要过度使用通配符。如果其他操作符能达到相同的目的，应该使用其他操作符。</li>
+<li>在确实需要使用通配符时，也尽量不要把它们用在搜索模式的开始处。<strong>把通配符放在开始处，搜索起来是最慢的</strong>。</li>
+<li>仔细注意通配符的位置。如果放错地方，可能不会返回想要的数据。</li>
+</ul>
+
 </section>
 
 
