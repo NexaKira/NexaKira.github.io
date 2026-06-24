@@ -1,1 +1,9 @@
-<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 我的技术博客</title><link>https://NexaKira.github.io/posts/</link><description>Recent content in Posts on 我的技术博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 22 Jun 2026 21:38:50 +0800</lastBuildDate><atom:link href="https://NexaKira.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>My First Project</title><link>https://NexaKira.github.io/posts/my-first-project/</link><pubDate>Mon, 22 Jun 2026 21:38:50 +0800</pubDate><guid>https://NexaKira.github.io/posts/my-first-project/</guid><description>&lt;p&gt;这是我的第一篇文档&lt;/p&gt;</description></item></channel></rss>
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:content="http://purl.org/rss/1.0/modules/content/"><channel><title>Posts on 我的技术博客</title><link>https://NexaKira.github.io/posts/</link><description>Recent content in Posts on 我的技术博客</description><generator>Hugo</generator><language>zh-cn</language><lastBuildDate>Mon, 22 Jun 2026 21:38:50 +0800</lastBuildDate><atom:link href="https://NexaKira.github.io/posts/index.xml" rel="self" type="application/rss+xml"/><item><title>hugo笔记</title><link>https://NexaKira.github.io/posts/hugo%E7%AC%94%E8%AE%B0/</link><pubDate>Mon, 22 Jun 2026 21:38:50 +0800</pubDate><guid>https://NexaKira.github.io/posts/hugo%E7%AC%94%E8%AE%B0/</guid><description>&lt;p&gt;&lt;strong&gt;创建新文章：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;hugo new content posts/文章名.md
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;启动预览服务器：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;hugo server -D
+&lt;/code&gt;&lt;/pre&gt;&lt;p&gt;&lt;strong&gt;一键发布：&lt;/strong&gt;&lt;/p&gt;
+&lt;pre tabindex="0"&gt;&lt;code&gt;git add .
+git commit -m &amp;#34;Publish: 增加了关于数据结构的笔记&amp;#34;
+git push
+&lt;/code&gt;&lt;/pre&gt;</description></item></channel></rss>
